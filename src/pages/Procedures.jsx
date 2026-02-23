@@ -41,9 +41,9 @@ export default function Procedures() {
             </div>
 
             <div className="grid gap-4">
-              {[{ title: 'Entrée Express', desc: "Système de sélection rapide pour les travailleurs qualifiés.", badge: 'Populaire' },
+              {[{ title: 'Entrée Express individuel', desc: "Système de sélection rapide pour les travailleurs qualifiés.", badge: 'Populaire' },
                 { title: "Permis d'Études", desc: "Accompagnement complet de l'admission au visa étudiant." },
-                { title: 'Regroupement Familial', desc: 'Parrainage conjoint, enfants ou parents.' }].map((x) => (
+                { title: 'Entrée Express Groupe', desc: 'Parrainage conjoint, enfants ou parents.' }].map((x) => (
                 <div key={x.title} className="p-5 rounded-2xl border border-slate-200 hover:border-accent transition-all hover:shadow-lg">
                   <div className="flex items-start justify-between gap-4">
                     <div>
