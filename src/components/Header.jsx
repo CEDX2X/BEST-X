@@ -17,12 +17,12 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           <Link to="/" className="flex items-center space-x-2">
-            {/* LOGO IMAGE */}
-            <div className="w-10 h-10 rounded-lg overflow-hidden bg-white border border-slate-100 flex items-center justify-center">
+            {/* LOGO IMAGE (object-contain) */}
+            <div className="w-10 h-10 rounded-lg overflow-hidden bg-white border border-slate-100 flex items-center justify-center p-1">
               <img
                 src={logoUrl}
                 alt="Best Travel"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
                 loading="lazy"
               />
             </div>
@@ -67,39 +67,19 @@ export default function Header() {
         id="mobile-menu"
         className={`${isMobileMenuOpen ? 'flex' : 'hidden'} md:hidden absolute top-16 left-0 w-full bg-white border-b border-slate-100 flex-col p-4 space-y-4 shadow-xl`}
       >
-        <Link
-          className="text-primary font-bold text-lg px-4 py-2 hover:bg-slate-50 rounded-lg"
-          to="/"
-          onClick={() => setIsMobileMenuOpen(false)}
-        >
+        <Link className="text-primary font-bold text-lg px-4 py-2 hover:bg-slate-50 rounded-lg" to="/" onClick={() => setIsMobileMenuOpen(false)}>
           Accueil
         </Link>
-        <Link
-          className="text-slate-600 font-medium text-lg px-4 py-2 hover:bg-slate-50 rounded-lg"
-          to="/procedures"
-          onClick={() => setIsMobileMenuOpen(false)}
-        >
+        <Link className="text-slate-600 font-medium text-lg px-4 py-2 hover:bg-slate-50 rounded-lg" to="/procedures" onClick={() => setIsMobileMenuOpen(false)}>
           Procédures
         </Link>
-        <Link
-          className="text-slate-600 font-medium text-lg px-4 py-2 hover:bg-slate-50 rounded-lg"
-          to="/auto-ecole"
-          onClick={() => setIsMobileMenuOpen(false)}
-        >
+        <Link className="text-slate-600 font-medium text-lg px-4 py-2 hover:bg-slate-50 rounded-lg" to="/auto-ecole" onClick={() => setIsMobileMenuOpen(false)}>
           Auto-école
         </Link>
-        <Link
-          className="text-slate-600 font-medium text-lg px-4 py-2 hover:bg-slate-50 rounded-lg"
-          to="/langues"
-          onClick={() => setIsMobileMenuOpen(false)}
-        >
+        <Link className="text-slate-600 font-medium text-lg px-4 py-2 hover:bg-slate-50 rounded-lg" to="/langues" onClick={() => setIsMobileMenuOpen(false)}>
           Cours de langue
         </Link>
-        <Link
-          className="bg-accent text-white px-4 py-3 rounded-xl font-bold text-center shadow-lg"
-          to="/contact"
-          onClick={() => setIsMobileMenuOpen(false)}
-        >
+        <Link className="bg-accent text-white px-4 py-3 rounded-xl font-bold text-center shadow-lg" to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
           Commencer mon Évaluation
         </Link>
       </div>
