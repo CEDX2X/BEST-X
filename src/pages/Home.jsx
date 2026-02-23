@@ -9,9 +9,9 @@ export default function Home() {
     <main>
       <section className="relative h-[600px] sm:h-[700px] w-full flex items-center overflow-hidden">
         <img
-          alt="Vue de Toronto"
+          alt="Affiche de best travel presente qui nous sommes"
           className="absolute inset-0 w-full h-full object-cover"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2CBvOztLkaNDYjw1WsX3k5DNKKhIAZBq-Jvfpbez0U2zEsGQ5dGUomRov5ID_XosehgnHd7Pw1_xpi4eK2dIsUAMrZm3ydC-38jk6DQVjutUekOT3UNmuhLZBS6QROvnH3kgSVKYC9JJKfrQCWb6KkhcteX7DGeYmGf3maZ6SVBLNvfzoDr3ShYqPa0wgYKeUlKZJdovBjX4RVQro7fyyvBYCdSjLdyytaH0FHQ942VTFD9LI98gBTLUjNFir1iMolQ-Dewdb4lk"
+          src="https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FBEST1.jpeg?alt=media&token=2d7b4f19-468d-46a0-adf6-e717d224c413"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"></div>
         <div className="relative max-w-7xl mx-auto px-6 sm:px-12 w-full">
