@@ -32,7 +32,7 @@ export default function Footer() {
             <ul className="space-y-4 text-slate-400">
               <li className="flex items-start space-x-3">
                 <span className="material-icons text-accent text-xl">location_on</span>
-                <span className="text-sm">Akwa, Rue de la Joie, Douala, Cameroun</span>
+                <span className="text-sm">Makepe, station Gulfin apres le carrefour conquête,Douala Cameroun</span>
               </li>
               <li className="flex items-center space-x-3">
                 <span className="material-icons text-accent text-xl">phone</span>
