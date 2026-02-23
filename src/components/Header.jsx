@@ -10,15 +10,15 @@ export default function Header() {
       : 'text-slate-600 font-medium hover:text-primary transition-colors'
 
   const logoUrl =
-    'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FLOGO%20BEST%20(2).jpeg?alt=media&token=3a4b7f82-c229-4599-82cf-5b5dd7a6b2e7'
+    'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.googleapis.com/o/Ced%2FLOGO%20BEST%20(2).jpeg?alt=media&token=3a4b7f82-c229-4599-82cf-5b5dd7a6b2e7'
 
   return (
     <header className="bg-white/95 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
-          <Link to="/" className="flex items-center space-x-2">
-            {/* LOGO IMAGE (object-contain) */}
-            <div className="w-10 h-10 rounded-lg overflow-hidden bg-white border border-slate-100 flex items-center justify-center p-1">
+          <Link to="/" className="flex items-center space-x-3">
+            {/* LOGO (agrandi + responsive) */}
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl overflow-hidden bg-white border border-slate-100 flex items-center justify-center p-1.5">
               <img
                 src={logoUrl}
                 alt="Best Travel"
@@ -28,10 +28,10 @@ export default function Header() {
             </div>
 
             <div className="flex flex-col">
-              <span className="font-bold text-primary text-lg leading-none tracking-tight">
+              <span className="font-bold text-primary text-lg sm:text-xl leading-none tracking-tight">
                 BEST TRAVEL
               </span>
-              <span className="text-[10px] font-bold text-accent tracking-[0.2em] uppercase">
+              <span className="text-[10px] sm:text-[11px] font-bold text-accent tracking-[0.2em] uppercase">
                 Votre Rêve commence ici!
               </span>
             </div>
