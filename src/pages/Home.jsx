@@ -18,7 +18,7 @@ export default function Home() {
           <div className="max-w-2xl space-y-6">
             <div className="inline-flex items-center px-4 py-1.5 bg-accent/20 border border-accent/30 text-accent rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
               <span className="w-2 h-2 bg-accent rounded-full mr-2 animate-pulse"></span>
-              Basé au Cameroun (Douala & Yaoundé)
+              Basé au Cameroun à DOUALA 
             </div>
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white leading-[1.1]">
               Votre rêve canadien commence au <span className="text-accent">Cameroun</span>.
