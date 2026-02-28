@@ -10,10 +10,10 @@ export default function Footer() {
               <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
                 <span className="material-symbols-outlined text-white text-2xl">map</span>
               </div>
-              <span className="font-bold text-xl tracking-tight">CanadaExpress</span>
+              <span className="font-bold text-xl tracking-tight">Best Travel Service</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Cabinet leader de l'accompagnement en immigration canadienne au Cameroun. Votre réussite est notre priorité absolue depuis plus de 10 ans.
+              Cabinet leader de l'accompagnement en immigration canadienne au Cameroun. Votre réussite est notre priorité absolue depuis plus de 2023.
             </p>
           </div>
 
