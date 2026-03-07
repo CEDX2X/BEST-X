@@ -41,7 +41,7 @@ export default function Procedures() {
             </div>
 
             <div className="grid gap-4">
-              {[{ title: 'Permis d\'Études', desc: "Accompagnement complet de l'admission au visa étudiant.", badge: 'Populaire', image1: 'https://via.placeholder.com/200x150?text=Study1', image2: 'https://via.placeholder.com/200x150?text=Study2' },
+              {[{ title: 'Permis d\'Étude', desc: "Accompagnement complet de l'admission au visa étudiant.", badge: 'Populaire', image1: 'https://via.placeholder.com/200x150?text=Study1', image2: 'https://via.placeholder.com/200x150?text=Study2' },
                 { title: "Entrée Express Individuel.", desc: "Système de sélection rapide pour les travailleurs qualifiés.", image1: 'https://via.placeholder.com/200x150?text=Express1', image2: 'https://via.placeholder.com/200x150?text=Express2' },
                 { title: 'Entrée Express Groupe', desc: 'Parrainage conjoint, enfants ou parents.', image1: 'https://via.placeholder.com/200x150?text=Group1', image2: 'https://via.placeholder.com/200x150?text=Group2' }].map((x) => (
                 <div key={x.title} className="p-5 rounded-2xl border border-slate-200 hover:border-accent transition-all hover:shadow-lg">
