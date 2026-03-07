@@ -41,10 +41,14 @@ export default function Procedures() {
             </div>
 
             <div className="grid gap-4">
-              {[{ title: 'Permis d\'Études', desc: "Accompagnement complet de l'admission au visa étudiant.", badge: 'Populaire' },
-                { title: "Entree Express Individuel.", desc: "Système de sélection rapide pour les travailleurs qualifiés." },
-                { title: 'Entrée Express Groupe', desc: 'Parrainage conjoint, enfants ou parents.' }].map((x) => (
+              {[{ title: 'Permis d\'Études', desc: "Accompagnement complet de l'admission au visa étudiant.", badge: 'Populaire', image1: 'https://via.placeholder.com/200x150?text=Study1', image2: 'https://via.placeholder.com/200x150?text=Study2' },
+                { title: "Entrée Express Individuel.", desc: "Système de sélection rapide pour les travailleurs qualifiés.", image1: 'https://via.placeholder.com/200x150?text=Express1', image2: 'https://via.placeholder.com/200x150?text=Express2' },
+                { title: 'Entrée Express Groupe', desc: 'Parrainage conjoint, enfants ou parents.', image1: 'https://via.placeholder.com/200x150?text=Group1', image2: 'https://via.placeholder.com/200x150?text=Group2' }].map((x) => (
                 <div key={x.title} className="p-5 rounded-2xl border border-slate-200 hover:border-accent transition-all hover:shadow-lg">
+                  <div className="flex gap-2 mb-4 sm:flex-row flex-col">
+                    <img src={x.image1 || 'https://via.placeholder.com/200x150?text=No+Image'} alt="" className="w-full sm:w-1/2 h-24 object-cover rounded-lg" />
+                    <img src={x.image2 || 'https://via.placeholder.com/200x150?text=No+Image'} alt="" className="w-full sm:w-1/2 h-24 object-cover rounded-lg" />
+                  </div>
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <h3 className="font-bold text-lg">{x.title}</h3>
@@ -70,15 +74,15 @@ export default function Procedures() {
                 <span className="material-symbols-outlined text-3xl">flight_takeoff</span>
               </div>
               <div>
-                <h2 className="text-2xl font-extrabold text-primary">Immigration Italie</h2>
-                <p className="text-slate-500">Culture, histoire et opportunités</p>
+                <h2 className="text-2xl font-extrabold text-primary">Immigration Italie & France</h2>
+                <p className="text-slate-500">Culture, histoire et Diversement</p>
               </div>
             </div>
 
             <div className="grid gap-4">
-              {[{ title: 'Decreto Flussi', desc: "Programme annuel d’accès au marché du travail italien.", badge: 'Saisonnier' },
+              {[{ title: 'Visa Visiteur Italie', desc: "Programme annuel d’accès au marché du travail italien.", badge: 'Saisonnier' },
                 { title: 'Visa Étudiant', desc: "Inscription université + accompagnement dossier." },
-                { title: 'Visa Travail Autonome', desc: 'Pour entrepreneurs et freelances.' }].map((x) => (
+                { title: 'Visa Travail Autonome', desc: 'Visas Visiteurs France.' }].map((x) => (
                 <div key={x.title} className="p-5 rounded-2xl border border-slate-200 hover:border-primary transition-all hover:shadow-lg">
                   <div className="flex items-start justify-between gap-4">
                     <div>
