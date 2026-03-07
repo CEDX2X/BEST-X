@@ -2,6 +2,18 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Procedures() {
+  const canadaProcedures = [
+    { title: 'Permis d\'Étude', desc: "Accompagnement complet de l'admission au visa étudiant.", badge: 'Populaire', image: 'https://via.placeholder.com/400x150?text=Study' },
+    { title: "Entrée Express Individuel.", desc: "Système de sélection rapide pour les travailleurs qualifiés.", image: 'https://via.placeholder.com/400x150?text=Express' },
+    { title: 'Entrée Express Groupe', desc: 'Parrainage conjoint, enfants ou parents.', image: 'https://via.placeholder.com/400x150?text=Group' }
+  ];
+
+  const europeProcedures = [
+    { title: 'Visa Visiteur Italie', desc: "Programme annuel d’accès au marché du travail italien.", badge: 'Saisonnier' },
+    { title: 'Visa Étudiant', desc: "Inscription université + accompagnement dossier." },
+    { title: 'Visa Travail Autonome', desc: 'Visas Visiteurs France.' }
+  ];
+
   return (
     <main className="bg-slate-50">
       <section className="py-16 sm:py-20">
@@ -29,6 +41,8 @@ export default function Procedures() {
 
       <section className="pb-20">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          {/* Section Canada */}
           <div className="bg-white rounded-2xl border border-slate-100 p-6 sm:p-8 shadow-sm">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-14 h-14 rounded-2xl bg-accent text-white flex items-center justify-center">
@@ -41,13 +55,10 @@ export default function Procedures() {
             </div>
 
             <div className="grid gap-4">
-              {[{ title: 'Permis d\'Étude', desc: "Accompagnement complet de l'admission au visa étudiant.", badge: 'Populaire', image1: 'https://via.placeholder.com/200x150?text=Study1', image2: 'https://via.placeholder.com/200x150?text=Study2' },
-                { title: "Entrée Express Individuel.", desc: "Système de sélection rapide pour les travailleurs qualifiés.", image1: 'https://via.placeholder.com/200x150?text=Express1', image2: 'https://via.placeholder.com/200x150?text=Express2' },
-                { title: 'Entrée Express Groupe', desc: 'Parrainage conjoint, enfants ou parents.', image1: 'https://via.placeholder.com/200x150?text=Group1', image2: 'https://via.placeholder.com/200x150?text=Group2' }].map((x) => (
+              {canadaProcedures.map((x) => (
                 <div key={x.title} className="p-5 rounded-2xl border border-slate-200 hover:border-accent transition-all hover:shadow-lg">
-                  <div className="flex gap-2 mb-4 sm:flex-row flex-col">
-                    <img src={x.image1 || 'https://via.placeholder.com/200x150?text=No+Image'} alt="" className="w-full sm:w-1/2 h-24 object-cover rounded-lg" />
-                    <img src={x.image2 || 'https://via.placeholder.com/200x150?text=No+Image'} alt="" className="w-full sm:w-1/2 h-24 object-cover rounded-lg" />
+                  <div className="mb-4">
+                    <img src={x.image} alt={x.title} className="w-full h-24 object-cover rounded-lg" />
                   </div>
                   <div className="flex items-start justify-between gap-4">
                     <div>
@@ -68,6 +79,7 @@ export default function Procedures() {
             </div>
           </div>
 
+          {/* Section Italie/France */}
           <div className="bg-white rounded-2xl border border-slate-100 p-6 sm:p-8 shadow-sm">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center">
@@ -75,14 +87,12 @@ export default function Procedures() {
               </div>
               <div>
                 <h2 className="text-2xl font-extrabold text-primary">Immigration Italie & France</h2>
-                <p className="text-slate-500">Culture, histoire et Diversement</p>
+                <p className="text-slate-500">Culture, histoire et diversité</p>
               </div>
             </div>
 
             <div className="grid gap-4">
-              {[{ title: 'Visa Visiteur Italie', desc: "Programme annuel d’accès au marché du travail italien.", badge: 'Saisonnier' },
-                { title: 'Visa Étudiant', desc: "Inscription université + accompagnement dossier." },
-                { title: 'Visa Travail Autonome', desc: 'Visas Visiteurs France.' }].map((x) => (
+              {europeProcedures.map((x) => (
                 <div key={x.title} className="p-5 rounded-2xl border border-slate-200 hover:border-primary transition-all hover:shadow-lg">
                   <div className="flex items-start justify-between gap-4">
                     <div>
@@ -102,6 +112,7 @@ export default function Procedures() {
               ))}
             </div>
           </div>
+
         </div>
       </section>
     </main>
