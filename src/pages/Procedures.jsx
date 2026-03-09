@@ -58,7 +58,7 @@ export default function Procedures() {
               {canadaProcedures.map((x) => (
                 <div key={x.title} className="p-5 rounded-2xl border border-slate-200 hover:border-accent transition-all hover:shadow-lg">
                   <div className="mb-4">
-                    <img src={x.image} alt={x.title} className="w-full h-24 object-cover rounded-lg" />
+                    <img src={x.image} alt={x.title} className="w-full aspect-square object-cover rounded-lg" />
                   </div>
                   <div className="flex items-start justify-between gap-4">
                     <div>
