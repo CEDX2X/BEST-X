@@ -7,10 +7,10 @@ export default function Home() {
 
   return (
     <main>
-      <section className="relative h-[600px] sm:h-[700px] w-full flex items-center overflow-hidden">
+      <section className="relative h-[500px] sm:h-[700px] w-full flex items-center overflow-hidden">
         <img
           alt="Affiche de best travel presente qui nous sommes"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
           src="https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FBEST1.jpeg?alt=media&token=2d7b4f19-468d-46a0-adf6-e717d224c413"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"></div>
