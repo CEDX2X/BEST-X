@@ -9,9 +9,9 @@ export default function Procedures() {
   ];
 
   const europeProcedures = [
-    { title: 'Visa Visiteur Italie', desc: "Programme annuel d’accès au marché du travail italien.", badge: 'Saisonnier' },
-    { title: 'Visa Étudiant', desc: "Inscription université + accompagnement dossier." },
-    { title: 'Visa Travail Autonome', desc: 'Visas Visiteurs France.' }
+    { title: 'Visa Visiteur Italie', desc: "Programme annuel d’accès au marché du travail italien.", badge: 'Saisonnier', image: 'https://via.placeholder.com/400x150?text=Italia' },
+    { title: 'Visa Étudiant', desc: "Inscription université + accompagnement dossier.", image: 'https://via.placeholder.com/400x150?text=Student' },
+    { title: 'Visa Travail Autonome', desc: 'Visas Visiteurs France.', image: 'https://via.placeholder.com/400x150?text=Work' }
   ];
 
   return (
@@ -94,6 +94,9 @@ export default function Procedures() {
             <div className="grid gap-4">
               {europeProcedures.map((x) => (
                 <div key={x.title} className="p-5 rounded-2xl border border-slate-200 hover:border-primary transition-all hover:shadow-lg">
+                  <div className="mb-4">
+                    <img src={x.image} alt={x.title} className="w-full aspect-square object-cover rounded-lg" />
+                  </div>
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <h3 className="font-bold text-lg">{x.title}</h3>
