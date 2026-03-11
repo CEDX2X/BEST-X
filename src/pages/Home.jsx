@@ -11,7 +11,7 @@ export default function Home() {
         <img
           alt="Affiche de best travel presente qui nous sommes"
           className="absolute inset-0 w-full h-full object-cover object-center"
-          src="https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FBEST1.jpeg?alt=media&token=2d7b4f19-468d-46a0-adf6-e717d224c413"
+          src="https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FPage%20d'accueil_Plan%20de%20travail%201.jpg.jpeg?alt=media&token=6488aeee-b014-4164-8a0d-ff857b1dc5fc"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"></div>
         <div className="relative max-w-7xl mx-auto px-6 sm:px-12 w-full">

@@ -30,7 +30,7 @@ export default function AutoEcole() {
             <img
               alt="Cours de conduite"
               className="w-full h-[360px] object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkRkS_d7i4QGmYbiNpINlnsVqbgDoDtRtZalbqO_jy4slnrfUb8AZZjoniN1jvXMJ3lwBpti4G4ISkdvNiJK-fnQOYyaIeepI9cHytstjFladmcpUgCWsqN5pC2CVo6144NIaf_iLlzNB1bqUsCYUF1bS1yZP96-p1N5BMFo1FKrLWEjgmodkqGrnnFOJ2xN_mEt5OSajabXDvcoqIjs4s10jJT6qSmlH6OFNtnnPU-Ti9hM55aBngatGuHcdzW4LZ_gznDOXRjo4"
+              src="https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FAuto%20ecole_Plan%20de%20travail%201%20copie.jpg.jpeg?alt=media&token=892587db-b98d-4b57-bfd8-1fe63f50f87b"
             />
           </div>
         </div>
