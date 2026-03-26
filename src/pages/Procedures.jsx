@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom'
 
 export default function Procedures() {
   const canadaProcedures = [
-    { title: 'Permis d\'Étude', desc: "Accompagnement complet de l'admission au visa étudiant.", badge: 'Populaire', image: 'https://via.placeholder.com/400x150?text=Study' },
-    { title: "Entrée Express Individuel.", desc: "Système de sélection rapide pour les travailleurs qualifiés.", image: 'https://via.placeholder.com/400x150?text=Express' },
-    { title: 'Entrée Express Groupe', desc: 'Parrainage conjoint, enfants ou parents.', image: 'https://via.placeholder.com/400x150?text=Group' }
+    { title: 'Permis d\'Étude', desc: "Accompagnement complet de l'admission au visa étudiant.", badge: 'Populaire', image: 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Fvisa%20%C3%A9tudiant.jpg.jpeg?alt=media&token=af1ad51f-71da-42f5-8211-8730971009eb' },
+    { title: "Entrée Express Individuel.", desc: "Système de sélection rapide pour les travailleurs qualifiés.", image: 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Fvisa%20%C3%A9tudiant.jpg.jpeg?alt=media&token=af1ad51f-71da-42f5-8211-8730971009eb' },
+    { title: 'Entrée Express Groupe', desc: 'Parrainage conjoint, enfants ou parents.', image: 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FRP%20couple.jpg.jpeg?alt=media&token=c73f0615-ddca-4135-a124-25f3cc70b41f' }
   ];
 
   const europeProcedures = [
-    { title: 'Visa Visiteur Italie', desc: "Programme annuel d’accès au marché du travail italien.", badge: 'Saisonnier', image: 'https://via.placeholder.com/400x150?text=Italia' },
-    { title: 'Visa Étudiant', desc: "Inscription université + accompagnement dossier.", image: 'https://via.placeholder.com/400x150?text=Student' },
-    { title: 'Visa Travail Autonome', desc: 'Visas Visiteurs France.', image: 'https://via.placeholder.com/400x150?text=Work' }
+    { title: 'Visa Visiteur Italie', desc: "Programme annuel d’accès au marché du travail italien.", badge: 'Saisonnier', image: 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Fvisiter%20l'italie.jpg.jpeg?alt=media&token=2831c4b7-9ffd-44b7-9978-372874954f9d' },
+    { title: 'Visa Étudiant', desc: "Inscription université + accompagnement dossier.", image: 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Fvisa%20%C3%A9tudiant.jpg.jpeg?alt=media&token=af1ad51f-71da-42f5-8211-8730971009eb' },
+    { title: 'Visa Travail Autonome', desc: 'Visas Visiteurs France.', image: 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FRP%20couple.jpg.jpeg?alt=media&token=c73f0615-ddca-4135-a124-25f3cc70b41f' }
   ];
 
   return (
