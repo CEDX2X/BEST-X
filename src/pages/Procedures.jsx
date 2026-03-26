@@ -25,7 +25,7 @@ export default function Procedures() {
             Immigration <span className="text-accent">Canada</span> & <span className="text-primary">Italie</span>
           </h1>
           <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-            BestTravel vous accompagne pas à pas dans vos démarches d'immigration. Profitez de notre expertise locale au Cameroun.
+            Best HYTravel vous accompagne pas à pas dans vos démarches d'immigration. Profitez de notre expertise locale au Cameroun.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
