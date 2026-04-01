@@ -69,7 +69,7 @@ export default function Footer() {
 
       <a
         className="fixed right-6 bottom-20 sm:bottom-24 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50 hover:scale-110 transition-transform"
-        href="https://wa.me/237655234857"
+        href="https://wa.me/237691001784"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp"
