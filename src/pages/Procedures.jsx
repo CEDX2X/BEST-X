@@ -9,7 +9,7 @@ export default function Procedures() {
   ];
 
   const europeProcedures = [
-    { title: 'Visa Visiteur Italie', desc: "Programme annuel d’accès au marché du travail italien.", badge: 'Saisonnier', image: 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Fvisiter%20l'italie.jpg.jpeg?alt=media&token=2831c4b7-9ffd-44b7-9978-372874954f9d' },
+    { title: 'Visa Visiteur Italie', desc: "Programme annuel d’accès au marché du travail italien.", badge: 'Saisonnier', image: 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Fvisiter%20litalie.jpg.jpeg?alt=media&token=2831c4b7-9ffd-44b7-9978-372874954f9d' },
     { title: 'Visa Étudiant', desc: "Inscription université + accompagnement dossier.", image: 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Fvisa%20%C3%A9tudiant.jpg.jpeg?alt=media&token=af1ad51f-71da-42f5-8211-8730971009eb' },
     { title: 'Visa Travail Autonome', desc: 'Visas Visiteurs France.', image: 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FRP%20couple.jpg.jpeg?alt=media&token=c73f0615-ddca-4135-a124-25f3cc70b41f' }
   ];
@@ -41,7 +41,7 @@ export default function Procedures() {
 
       <section className="pb-20">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
-          
+
           {/* Section Canada */}
           <div className="bg-white rounded-2xl border border-slate-100 p-6 sm:p-8 shadow-sm">
             <div className="flex items-center gap-4 mb-6">
