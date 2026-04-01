@@ -9,7 +9,7 @@ export default function Contact() {
     fullName: '',
     email: '',
     phone: '',
-    service: 'immigration',
+    service: 'permis-etude-canada',
     message: '',
   })
 
@@ -17,12 +17,17 @@ export default function Contact() {
 
   const serviceLabel = useMemo(() => {
     const map = {
-      immigration: 'Immigration Canada',
+      'permis-etude-canada': "Permis d'Étude (Canada)",
+      'entree-express-individuel': "Entrée Express (Individuel)",
+      'entree-express-famille': "Entrée Express (Famille)",
+      'visa-visiteur-italie': "Visa Visiteur Italie",
+      'visa-etudiant-europe': "Visa Étudiant Europe",
+      'visa-travail-autonome': "Visa Travail Autonome",
       'auto-ecole': 'Auto-école',
-      langues: 'Cours de Langues (TEF/TCF/IELTS)',
-      autres: 'Autres informations',
+      'langues': 'Cours de Langues (TEF/TCF/IELTS)',
+      'autres': 'Autres informations',
     }
-    return map[form.service] ?? 'Immigration Canada'
+    return map[form.service] ?? "Permis d'Étude (Canada)"
   }, [form.service])
 
   const onChange = (e) => {
@@ -48,39 +53,50 @@ export default function Contact() {
       return
     }
 
-    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
-    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
-    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-
-    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
-      setStatus({
-        loading: false,
-        error:
-          'Configuration EmailJS manquante (.env). Ajoute VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY.',
-      })
-      return
-    }
-
     setStatus({ loading: true, error: '' })
 
     try {
-      const templateParams = {
-        full_name: form.fullName,
-        email: form.email,
-        phone: form.phone,
-        service: serviceLabel,
-        message: form.message || '(Aucun message)',
-        source: 'Website Contact Form',
+      // 1. Préparer le message WhatsApp
+      const text = `*Nouvelle demande de contact (Site Web)*
+
+*Nom complet :* ${form.fullName}
+*Email :* ${form.email}
+*Téléphone :* ${form.phone}
+*Service souhaité :* ${serviceLabel}
+*Message :* ${form.message || '(Aucun message)'}`
+
+      // Numéro WhatsApp récupéré depuis le Footer
+      const whatsappUrl = `https://wa.me/237655234857?text=${encodeURIComponent(text)}`
+
+      // 2. Tenter d'envoyer aussi un email si la configuration existe
+      const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+      const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+      const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+      if (SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY) {
+        const templateParams = {
+          full_name: form.fullName,
+          email: form.email,
+          phone: form.phone,
+          service: serviceLabel,
+          message: form.message || '(Aucun message)',
+          source: 'Website Contact Form',
+        }
+        // Envoi en arrière-plan sans bloquer
+        emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY).catch(console.error)
       }
 
-      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+      // 3. Ouvrir WhatsApp dans un nouvel onglet
+      window.open(whatsappUrl, '_blank')
 
-      setForm({ fullName: '', email: '', phone: '', service: 'immigration', message: '' })
+      // 4. Nettoyer et rediriger
+      setForm({ fullName: '', email: '', phone: '', service: 'permis-etude-canada', message: '' })
+      setStatus({ loading: false, error: '' })
       navigate('/contact/success', { replace: true })
-    } catch {
+    } catch (error) {
       setStatus({
         loading: false,
-        error: "Échec d’envoi. Vérifie EmailJS (Service/Template/Public key + variables du template).",
+        error: "Une erreur est survenue lors de la préparation de votre message.",
       })
     }
   }
@@ -158,10 +174,21 @@ export default function Contact() {
                   onChange={onChange}
                   className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all appearance-none text-slate-700"
                 >
-                  <option value="immigration">Immigration Canada</option>
-                  <option value="auto-ecole">Auto-école</option>
-                  <option value="langues">Cours de Langues (TEF/TCF/IELTS)</option>
-                  <option value="autres">Autres informations</option>
+                  <optgroup label="Immigration Canada">
+                    <option value="permis-etude-canada">Permis d'Étude (Canada)</option>
+                    <option value="entree-express-individuel">Entrée Express (Individuel)</option>
+                    <option value="entree-express-famille">Entrée Express (Famille)</option>
+                  </optgroup>
+                  <optgroup label="Immigration Europe">
+                    <option value="visa-visiteur-italie">Visa Visiteur Italie</option>
+                    <option value="visa-etudiant-europe">Visa Étudiant Europe</option>
+                    <option value="visa-travail-autonome">Visa Travail Autonome</option>
+                  </optgroup>
+                  <optgroup label="Autres Services">
+                    <option value="auto-ecole">Auto-école</option>
+                    <option value="langues">Cours de Langues (TEF/TCF/IELTS)</option>
+                    <option value="autres">Autres informations</option>
+                  </optgroup>
                 </select>
                 <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span>
               </div>

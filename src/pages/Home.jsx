@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <main>
-      <section className="relative h-[500px] sm:h-[700px] w-full flex items-center overflow-hidden">
+      <section className="relative min-h-[400px] py-16 sm:py-0 sm:h-[700px] w-full flex items-center overflow-hidden">
         <img
           alt="Affiche de best travel presente qui nous sommes"
           className="absolute inset-0 w-full h-full object-cover object-center"
@@ -15,18 +15,18 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"></div>
         <div className="relative max-w-7xl mx-auto px-6 sm:px-12 w-full">
-          <div className="max-w-2xl space-y-6">
+          <div className="max-w-2xl space-y-4 sm:space-y-6">
             <div className="inline-flex items-center px-4 py-1.5 bg-accent/20 border border-accent/30 text-accent rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
               <span className="w-2 h-2 bg-accent rounded-full mr-2 animate-pulse"></span>
               Basé au Cameroun à DOUALA 
             </div>
-            <h1 className="text-4xl sm:text-6xl font-extrabold text-white leading-[1.1]">
+            <h1 className="text-3xl sm:text-6xl font-extrabold text-white leading-[1.15] sm:leading-[1.1]">
               Votre rêve canadien commence au <span className="text-accent">Cameroun</span>.
             </h1>
-            <p className="text-white/80 text-lg sm:text-xl leading-relaxed">
+            <p className="text-white/80 text-base sm:text-xl leading-relaxed">
               Un accompagnement certifié et de proximité pour votre projet d'immigration, d'études ou de travail au Canada.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-6">
               <button
                 onClick={() => navigate('/contact')}
                 className="px-8 py-4 bg-accent hover:bg-red-700 text-white rounded-xl font-bold text-lg transition-all shadow-xl hover:-translate-y-1"
