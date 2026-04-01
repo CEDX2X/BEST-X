@@ -11,7 +11,7 @@ export default function AutoEcole() {
               Formation à Douala & Yaoundé
             </span>
             <h1 className="text-4xl sm:text-6xl font-extrabold text-primary dark:text-white leading-tight">
-              Auto-école <span className="text-accent">BestTravel</span>
+              Auto-école <span className="text-accent">BestTravelservices</span>
             </h1>
             <p className="mt-4 text-slate-600 dark:text-slate-400 text-lg">
               Formation théorique et pratique pour obtenir votre permis rapidement avec des moniteurs certifiés.
