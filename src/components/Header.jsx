@@ -1,19 +1,21 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { useTheme } from '../context/ThemeContext'
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { theme, toggleTheme } = useTheme()
 
   const navClass = ({ isActive }) =>
     isActive
-      ? 'text-primary font-semibold hover:text-accent transition-colors'
-      : 'text-slate-600 font-medium hover:text-primary transition-colors'
+      ? 'text-primary dark:text-white font-semibold hover:text-accent transition-colors'
+      : 'text-slate-600 dark:text-slate-300 font-medium hover:text-primary dark:hover:text-white transition-colors'
 
   const logoUrl =
     'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FLOGO%20BEST%20(2).jpeg?alt=media&token=3a4b7f82-c229-4599-82cf-5b5dd7a6b2e7'
 
   return (
-    <header className="bg-white/95 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
+    <header className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           <Link to="/" className="flex items-center space-x-3">
@@ -28,7 +30,7 @@ export default function Header() {
             </div>
 
             <div className="flex flex-col">
-              <span className="font-bold text-primary text-lg sm:text-xl leading-none tracking-tight">
+              <span className="font-bold text-primary dark:text-white text-lg sm:text-xl leading-none tracking-tight">
                 BEST TRAVEL
               </span>
               <span className="text-[10px] sm:text-[11px] font-bold text-accent tracking-[0.2em] uppercase">
@@ -42,6 +44,9 @@ export default function Header() {
             <NavLink className={navClass} to="/auto-ecole">Auto-école</NavLink>
             <NavLink className={navClass} to="/langues">Cours de langue</NavLink>
             <NavLink className={navClass} to="/contact">Contact</NavLink>
+            <button onClick={toggleTheme} className="p-2 text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-white transition-colors" aria-label="Toggle Dark Mode">
+              <span className="material-symbols-outlined text-2xl">{theme === 'dark' ? 'light_mode' : 'dark_mode'}</span>
+            </button>
             <Link
               className="bg-accent hover:bg-red-700 text-white px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-md"
               to="/contact"
@@ -50,9 +55,12 @@ export default function Header() {
             </Link>
           </nav>
 
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center gap-2">
+            <button onClick={toggleTheme} className="p-2 text-slate-500 dark:text-slate-400" aria-label="Toggle Dark Mode">
+              <span className="material-symbols-outlined text-2xl">{theme === 'dark' ? 'light_mode' : 'dark_mode'}</span>
+            </button>
             <button
-              className="p-2 text-primary focus:outline-none"
+              className="p-2 text-primary dark:text-white focus:outline-none"
               onClick={() => setIsMobileMenuOpen((v) => !v)}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-menu"
@@ -65,18 +73,18 @@ export default function Header() {
 
       <div
         id="mobile-menu"
-        className={`${isMobileMenuOpen ? 'flex' : 'hidden'} md:hidden absolute top-16 left-0 w-full bg-white border-b border-slate-100 flex-col p-4 space-y-4 shadow-xl`}
+        className={`${isMobileMenuOpen ? 'flex' : 'hidden'} md:hidden absolute top-16 left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 flex-col p-4 space-y-4 shadow-xl`}
       >
-        <Link className="text-primary font-bold text-lg px-4 py-2 hover:bg-slate-50 rounded-lg" to="/" onClick={() => setIsMobileMenuOpen(false)}>
+        <Link className="text-primary dark:text-white font-bold text-lg px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg" to="/" onClick={() => setIsMobileMenuOpen(false)}>
           Accueil
         </Link>
-        <Link className="text-slate-600 font-medium text-lg px-4 py-2 hover:bg-slate-50 rounded-lg" to="/procedures" onClick={() => setIsMobileMenuOpen(false)}>
+        <Link className="text-slate-600 dark:text-slate-300 font-medium text-lg px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg" to="/procedures" onClick={() => setIsMobileMenuOpen(false)}>
           Procédures
         </Link>
-        <Link className="text-slate-600 font-medium text-lg px-4 py-2 hover:bg-slate-50 rounded-lg" to="/auto-ecole" onClick={() => setIsMobileMenuOpen(false)}>
+        <Link className="text-slate-600 dark:text-slate-300 font-medium text-lg px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg" to="/auto-ecole" onClick={() => setIsMobileMenuOpen(false)}>
           Auto-école
         </Link>
-        <Link className="text-slate-600 font-medium text-lg px-4 py-2 hover:bg-slate-50 rounded-lg" to="/langues" onClick={() => setIsMobileMenuOpen(false)}>
+        <Link className="text-slate-600 dark:text-slate-300 font-medium text-lg px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg" to="/langues" onClick={() => setIsMobileMenuOpen(false)}>
           Cours de langue
         </Link>
         <Link className="bg-accent text-white px-4 py-3 rounded-xl font-bold text-center shadow-lg" to="/contact" onClick={() => setIsMobileMenuOpen(false)}>

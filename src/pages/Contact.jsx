@@ -102,34 +102,34 @@ export default function Contact() {
   }
 
   return (
-    <main className="bg-white">
-      <section className="px-6 py-10 text-center bg-slate-50 border-b border-slate-100">
+    <main className="bg-white dark:bg-slate-900 transition-colors">
+      <section className="px-6 py-10 text-center bg-slate-50 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 transition-colors">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-bold uppercase tracking-wider mb-4">
           <span className="material-symbols-outlined text-sm">support_agent</span>
           Expertise Locale & Internationale
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-primary leading-tight">Contactez-nous</h1>
-        <p className="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-primary dark:text-white leading-tight">Contactez-nous</h1>
+        <p className="mt-4 text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
           Nos conseillers à Douala et Yaoundé sont là pour transformer votre rêve en réalité.
         </p>
       </section>
 
       <section className="px-6 py-12">
-        <div className="max-w-3xl mx-auto bg-white rounded-2xl p-6 sm:p-8 shadow-xl shadow-slate-200/50 border border-slate-100">
+        <div className="max-w-3xl mx-auto bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-700 transition-colors">
           <form className="space-y-5" onSubmit={onSubmit}>
             {status.error && (
-              <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 font-semibold">
+              <div className="rounded-xl border border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-900/30 px-4 py-3 text-sm text-red-700 dark:text-red-300 font-semibold">
                 {status.error}
               </div>
             )}
 
             <div>
-              <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Nom complet</label>
+              <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2 ml-1">Nom complet</label>
               <input
                 name="fullName"
                 value={form.fullName}
                 onChange={onChange}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all placeholder:text-slate-400"
+                className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all placeholder:text-slate-400 dark:text-white"
                 placeholder="Ex: Jean Mukoko"
                 type="text"
                 autoComplete="name"
@@ -137,12 +137,12 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Email</label>
+              <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2 ml-1">Email</label>
               <input
                 name="email"
                 value={form.email}
                 onChange={onChange}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all placeholder:text-slate-400"
+                className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all placeholder:text-slate-400 dark:text-white"
                 placeholder="votre@email.com"
                 type="email"
                 autoComplete="email"
@@ -150,14 +150,14 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Téléphone</label>
+              <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2 ml-1">Téléphone</label>
               <div className="flex gap-2">
-                <div className="bg-slate-100 rounded-xl px-4 flex items-center text-sm font-bold border border-slate-200">+237</div>
+                <div className="bg-slate-100 dark:bg-slate-700 rounded-xl px-4 flex items-center text-sm font-bold border border-slate-200 dark:border-slate-700 dark:text-white">+237</div>
                 <input
                   name="phone"
                   value={form.phone}
                   onChange={onChange}
-                  className="flex-1 bg-slate-50 border border-slate-200 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all placeholder:text-slate-400"
+                  className="flex-1 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all placeholder:text-slate-400 dark:text-white"
                   placeholder="6XX XXX XXX"
                   type="tel"
                   autoComplete="tel"
@@ -166,13 +166,13 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Service souhaité</label>
+              <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2 ml-1">Service souhaité</label>
               <div className="relative">
                 <select
                   name="service"
                   value={form.service}
                   onChange={onChange}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all appearance-none text-slate-700"
+                  className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all appearance-none text-slate-700 dark:text-white"
                 >
                   <optgroup label="Immigration Canada">
                     <option value="permis-etude-canada">Permis d'Étude (Canada)</option>
@@ -195,12 +195,12 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Message (Optionnel)</label>
+              <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2 ml-1">Message (Optionnel)</label>
               <textarea
                 name="message"
                 value={form.message}
                 onChange={onChange}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all placeholder:text-slate-400"
+                className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all placeholder:text-slate-400 dark:text-white"
                 placeholder="Comment pouvons-nous vous aider ?"
                 rows={4}
               />
@@ -210,15 +210,15 @@ export default function Contact() {
               <button
                 disabled={status.loading}
                 className={`w-full font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-3 ${status.loading
-                    ? 'bg-slate-300 text-slate-700 cursor-not-allowed'
-                    : 'bg-accent hover:bg-red-700 text-white shadow-accent/30 active:scale-[0.98]'
+                    ? 'bg-slate-300 dark:bg-slate-700 text-slate-700 dark:text-slate-300 cursor-not-allowed'
+                    : 'bg-accent hover:bg-red-700 text-white shadow-accent/30 dark:shadow-none active:scale-[0.98]'
                   }`}
                 type="submit"
               >
                 <span className="text-lg">{status.loading ? 'Envoi en cours...' : 'Envoyer ma demande'}</span>
                 <span className="material-symbols-outlined">{status.loading ? 'hourglass_top' : 'send'}</span>
               </button>
-              <p className="mt-3 text-xs text-slate-500 text-center">En soumettant ce formulaire, vous acceptez d’être recontacté par notre équipe.</p>
+              <p className="mt-3 text-xs text-slate-500 dark:text-slate-400 text-center">En soumettant ce formulaire, vous acceptez d’être recontacté par notre équipe.</p>
             </div>
           </form>
         </div>

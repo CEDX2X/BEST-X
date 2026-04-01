@@ -12,7 +12,7 @@ export default function MainLayout() {
   }
 
   return (
-    <div className="overflow-x-hidden font-display text-slate-800 bg-white antialiased min-h-screen flex flex-col">
+    <div className="overflow-x-hidden font-display text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-900 transition-colors antialiased min-h-screen flex flex-col">
       <Header />
       <div className="flex-1">
         <Outlet />

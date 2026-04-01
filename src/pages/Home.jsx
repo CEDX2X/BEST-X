@@ -44,41 +44,41 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-24 px-6 bg-slate-50">
+      <section className="py-16 sm:py-24 px-6 bg-slate-50 dark:bg-slate-900 transition-colors">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-primary mb-4">Nos Services d'Expertise</h2>
-            <p className="text-slate-500 text-lg">Nous vous accompagnons à chaque étape de votre projet avec des solutions adaptées à votre profil.</p>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-primary dark:text-white mb-4">Nos Services d'Expertise</h2>
+            <p className="text-slate-500 dark:text-slate-400 text-lg">Nous vous accompagnons à chaque étape de votre projet avec des solutions adaptées à votre profil.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-accent/20 transition-all duration-300">
-              <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+            <div className="group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl hover:border-accent/20 dark:hover:border-accent/30 transition-all duration-300">
+              <div className="w-16 h-16 bg-primary/5 dark:bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                 <span className="material-symbols-outlined text-primary group-hover:text-white text-4xl transition-colors">flight_takeoff</span>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Immigration & Visas</h3>
-              <p className="text-slate-500 leading-relaxed mb-6">Entrée express, regroupement familial, permis d'études et de travail. Analyse complète de votre admissibilité.</p>
+              <h3 className="text-xl font-bold text-primary dark:text-white mb-3">Immigration & Visas</h3>
+              <p className="text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Entrée express, regroupement familial, permis d'études et de travail. Analyse complète de votre admissibilité.</p>
               <Link className="inline-flex items-center text-accent font-bold group-hover:gap-2 transition-all" to="/procedures">
                 En savoir plus <span className="material-icons text-sm ml-1">arrow_forward</span>
               </Link>
             </div>
 
-            <div className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-accent/20 transition-all duration-300">
-              <div className="w-16 h-16 bg-accent/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
+            <div className="group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl hover:border-accent/20 dark:hover:border-accent/30 transition-all duration-300">
+              <div className="w-16 h-16 bg-accent/5 dark:bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
                 <span className="material-symbols-outlined text-accent group-hover:text-white text-4xl transition-colors">directions_car</span>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Préparation Permis</h3>
-              <p className="text-slate-500 leading-relaxed mb-6">Formation conduite intensive au Cameroun adaptée aux normes de sécurité routière canadiennes.</p>
+              <h3 className="text-xl font-bold text-primary dark:text-white mb-3">Préparation Permis</h3>
+              <p className="text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Formation conduite intensive au Cameroun adaptée aux normes de sécurité routière canadiennes.</p>
               <Link className="inline-flex items-center text-accent font-bold group-hover:gap-2 transition-all" to="/auto-ecole">
                 En savoir plus <span className="material-icons text-sm ml-1">arrow_forward</span>
               </Link>
             </div>
 
-            <div className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-accent/20 transition-all duration-300">
+            <div className="group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl hover:border-accent/20 dark:hover:border-accent/30 transition-all duration-300">
               <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                 <span className="material-symbols-outlined text-primary group-hover:text-white text-4xl transition-colors">translate</span>
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">Tests de Langue</h3>
-              <p className="text-slate-500 leading-relaxed mb-6">Cours intensifs pour TEF, TCF et IELTS. Maximisez vos points pour le bassin de sélection.</p>
+              <h3 className="text-xl font-bold text-primary dark:text-white mb-3">Tests de Langue</h3>
+              <p className="text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Cours intensifs pour TEF, TCF et IELTS. Maximisez vos points pour le bassin de sélection.</p>
               <Link className="inline-flex items-center text-accent font-bold group-hover:gap-2 transition-all" to="/langues">
                 En savoir plus <span className="material-icons text-sm ml-1">arrow_forward</span>
               </Link>
