@@ -10,10 +10,10 @@ export default function Procedures() {
       image: "https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Fvisa%20%C3%A9tudiant.jpg.jpeg?alt=media&token=af1ad51f-71da-42f5-8211-8730971009eb"
     },
     {
-      title: "Entrée Express (Individuel)",
-      desc: "Système rapide pour les travailleurs qualifiés souhaitant immigrer au Canada.",
-      badge: "Rapide",
-      image: "https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Fvisa%20%C3%A9tudiant.jpg.jpeg?alt=media&token=af1ad51f-71da-42f5-8211-8730971009eb"
+      title: "Preuve de Fonds",
+      desc: "Aide à la constitution de votre dossier financier conforme aux exigences d'immigration.",
+      badge: "Essentiel",
+      image: "https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FPreuve%20de%20fond.jpg.jpeg?alt=media&token=879ea7a3-a7dc-45fb-ac59-f9d944b3ec1b"
     },
     {
       title: "Entrée Express (Famille)",
