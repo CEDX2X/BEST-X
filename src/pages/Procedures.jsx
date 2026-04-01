@@ -37,7 +37,7 @@ export default function Procedures() {
       image: "https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Fvisa%20%C3%A9tudiant.jpg.jpeg?alt=media&token=af1ad51f-71da-42f5-8211-8730971009eb"
     },
     {
-      title: "Visa Travail Autonome",
+      title: "Visa Travail qualifié",
       desc: "Programme pour travailler légalement en Europe (ex : France).",
       badge: "Travail",
       image: "https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FRP%20couple.jpg.jpeg?alt=media&token=c73f0615-ddca-4135-a124-25f3cc70b41f"
