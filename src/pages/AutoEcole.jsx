@@ -17,7 +17,7 @@ export default function AutoEcole() {
               Formation théorique et pratique pour obtenir votre permis rapidement avec des moniteurs certifiés.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link to="/contact" className="px-8 py-4 bg-primary text-white rounded-xl font-bold text-lg shadow-xl hover:-translate-y-0.5 transition-all">
+              <Link to="/contact" className="px-8 py-4 bg-primary dark:bg-primary-dark text-white rounded-xl font-bold text-lg shadow-xl hover:-translate-y-0.5 transition-all">
                 S’inscrire
               </Link>
               <a href="#tarifs" className="px-8 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-lg hover:bg-slate-50 dark:hover:bg-slate-700 dark:text-white transition-all">
@@ -48,7 +48,7 @@ export default function AutoEcole() {
             ].map((p) => (
               <div key={p.title} className={`rounded-3xl p-8 border shadow-sm flex flex-col transition-colors ${p.featured ? 'border-accent shadow-xl bg-white dark:bg-slate-800' : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800'}`}>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{p.title}</h3>
-                <div className={`text-4xl font-extrabold ${p.featured ? 'text-accent' : 'text-primary dark:text-blue-400'} mb-6`}>{p.price}</div>
+                <div className={`text-4xl font-extrabold ${p.featured ? 'text-accent' : 'text-primary dark:text-white'} mb-6`}>{p.price}</div>
 
                 <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400 mb-8 flex-1">
                   <li className="flex gap-2"><span className="material-symbols-outlined text-green-600 dark:text-green-400 text-base">check</span> Cours de code + pratique</li>
@@ -58,7 +58,7 @@ export default function AutoEcole() {
 
                 <Link
                   to="/contact"
-                  className={`w-full py-3 text-center rounded-xl font-bold transition-all ${p.featured ? 'bg-accent text-white hover:bg-red-700' : 'border-2 border-primary dark:border-slate-600 text-primary dark:text-white hover:bg-primary dark:hover:bg-slate-700 hover:text-white'}`}
+                  className={`w-full py-3 text-center rounded-xl font-bold transition-all ${p.featured ? 'bg-accent text-white hover:bg-red-700' : 'border-2 border-primary dark:border-primary-dark text-primary dark:text-white hover:bg-primary dark:hover:bg-primary-dark hover:text-white'}`}
                 >
                   {p.cta}
                 </Link>

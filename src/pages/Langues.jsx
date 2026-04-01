@@ -33,8 +33,8 @@ export default function Langues() {
             { title: 'Examens blancs', icon: 'fact_check', desc: 'Simulation conditions réelles + feedback.' },
             { title: 'Coaching dossier', icon: 'emoji_events', desc: 'Orientation selon objectifs immigration/études.' }].map((c) => (
             <div key={c.title} className="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all">
-              <div className="w-16 h-16 rounded-2xl bg-primary/5 dark:bg-primary/20 flex items-center justify-center mb-6">
-                <span className="material-symbols-outlined text-primary dark:text-blue-300 text-3xl">{c.icon}</span>
+              <div className="w-16 h-16 rounded-2xl bg-primary/5 dark:bg-primary-dark/40 flex items-center justify-center mb-6">
+                <span className="material-symbols-outlined text-primary dark:text-white text-3xl">{c.icon}</span>
               </div>
               <h3 className="text-xl font-bold text-primary dark:text-white mb-2">{c.title}</h3>
               <p className="text-slate-600 dark:text-slate-400">{c.desc}</p>

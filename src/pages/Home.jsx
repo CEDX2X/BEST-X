@@ -13,7 +13,7 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover object-center"
           src="https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FPage%20d'accueil_Plan%20de%20travail%201.jpg.jpeg?alt=media&token=6488aeee-b014-4164-8a0d-ff857b1dc5fc"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 dark:from-primary-dark/95 via-primary/60 dark:via-primary-dark/80 to-transparent"></div>
         <div className="relative max-w-7xl mx-auto px-6 sm:px-12 w-full">
           <div className="max-w-2xl space-y-4 sm:space-y-6">
             <div className="inline-flex items-center px-4 py-1.5 bg-accent/20 border border-accent/30 text-accent rounded-full text-xs font-bold uppercase tracking-widest backdrop-blur-sm">
@@ -52,7 +52,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl hover:border-accent/20 dark:hover:border-accent/30 transition-all duration-300">
-              <div className="w-16 h-16 bg-primary/5 dark:bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+              <div className="w-16 h-16 bg-primary/5 dark:bg-primary-dark/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary dark:group-hover:bg-primary-dark transition-colors">
                 <span className="material-symbols-outlined text-primary group-hover:text-white text-4xl transition-colors">flight_takeoff</span>
               </div>
               <h3 className="text-xl font-bold text-primary dark:text-white mb-3">Immigration & Visas</h3>
@@ -74,7 +74,7 @@ export default function Home() {
             </div>
 
             <div className="group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl hover:border-accent/20 dark:hover:border-accent/30 transition-all duration-300">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+              <div className="w-16 h-16 bg-primary/10 dark:bg-primary-dark/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary dark:group-hover:bg-primary-dark transition-colors">
                 <span className="material-symbols-outlined text-primary group-hover:text-white text-4xl transition-colors">translate</span>
               </div>
               <h3 className="text-xl font-bold text-primary dark:text-white mb-3">Tests de Langue</h3>
@@ -87,7 +87,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 bg-primary">
+      <section className="py-12 bg-primary dark:bg-primary-dark transition-colors">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
             <div className="text-3xl sm:text-4xl font-extrabold text-white mb-1">98%</div>

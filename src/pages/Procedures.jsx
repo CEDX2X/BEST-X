@@ -48,18 +48,18 @@ export default function Procedures() {
     <main className="bg-slate-50 dark:bg-slate-900 transition-colors">
       <section className="py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <span className="inline-block py-1 px-3 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-4">
+          <span className="inline-block py-1 px-3 rounded-full bg-primary/10 dark:bg-primary-dark/40 text-primary dark:text-white text-xs font-bold uppercase tracking-wider mb-4">
             Experts en Immigration
           </span>
           <h1 className="text-4xl sm:text-6xl font-extrabold text-primary dark:text-white mb-6">
-            Immigration <span className="text-accent">Canada</span> & <span className="text-primary dark:text-blue-400">Italie</span>
+            Immigration <span className="text-accent">Canada</span> & <span className="text-primary dark:text-white">Italie</span>
           </h1>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
             Best HYTravel vous accompagne pas à pas dans vos démarches d'immigration. Profitez de notre expertise locale au Cameroun.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <Link className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition-all" to="/contact">
+            <Link className="bg-primary hover:bg-primary/90 dark:bg-primary-dark dark:hover:bg-primary-dark/90 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition-all" to="/contact">
               Prendre rendez-vous
             </Link>
             <a className="bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 px-8 py-4 rounded-xl font-bold text-lg transition-all" href="tel:+237600000000">
@@ -112,7 +112,7 @@ export default function Procedures() {
           {/* Section Italie/France */}
           <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 p-6 sm:p-8 shadow-sm transition-colors">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center">
+              <div className="w-14 h-14 rounded-2xl bg-primary dark:bg-primary-dark text-white flex items-center justify-center transition-colors">
                 <span className="material-symbols-outlined text-3xl">flight_takeoff</span>
               </div>
               <div>
@@ -123,7 +123,7 @@ export default function Procedures() {
 
             <div className="grid gap-4">
               {europeProcedures.map((x) => (
-                <div key={x.title} className="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary transition-all hover:shadow-lg dark:hover:bg-slate-700/50">
+                <div key={x.title} className="p-5 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary-dark transition-all hover:shadow-lg dark:hover:bg-slate-700/50">
                   <div className="mb-4">
                     <img src={x.image} alt={x.title} className="w-full aspect-square object-cover rounded-lg" />
                   </div>
@@ -133,11 +133,11 @@ export default function Procedures() {
                       <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">{x.desc}</p>
                     </div>
                     {x.badge && (
-                      <span className="text-[10px] font-bold px-2 py-1 rounded uppercase bg-primary/10 dark:bg-primary/20 text-primary dark:text-blue-300">{x.badge}</span>
+                      <span className="text-[10px] font-bold px-2 py-1 rounded uppercase bg-primary/10 dark:bg-primary-dark/40 text-primary dark:text-white">{x.badge}</span>
                     )}
                   </div>
                   <div className="mt-4">
-                    <Link className="text-primary dark:text-blue-400 font-bold inline-flex items-center gap-2 hover:gap-3 transition-all" to="/contact">
+                    <Link className="text-primary dark:text-white font-bold inline-flex items-center gap-2 hover:gap-3 transition-all" to="/contact">
                       En savoir plus <span className="material-symbols-outlined text-sm">arrow_forward</span>
                     </Link>
                   </div>
