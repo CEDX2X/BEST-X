@@ -66,7 +66,7 @@ export default function Contact() {
 *Message :* ${form.message || '(Aucun message)'}`
 
       // Numéro WhatsApp récupéré depuis le Footer
-      const whatsappUrl = `https://wa.me/237655234857?text=${encodeURIComponent(text)}`
+      const whatsappUrl = `https://wa.me/237688806414?text=${encodeURIComponent(text)}`
 
       // 2. Tenter d'envoyer aussi un email si la configuration existe
       const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
@@ -209,11 +209,10 @@ export default function Contact() {
             <div className="pt-2">
               <button
                 disabled={status.loading}
-                className={`w-full font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-3 ${
-                  status.loading
+                className={`w-full font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-3 ${status.loading
                     ? 'bg-slate-300 text-slate-700 cursor-not-allowed'
                     : 'bg-accent hover:bg-red-700 text-white shadow-accent/30 active:scale-[0.98]'
-                }`}
+                  }`}
                 type="submit"
               >
                 <span className="text-lg">{status.loading ? 'Envoi en cours...' : 'Envoyer ma demande'}</span>
