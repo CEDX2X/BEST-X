@@ -74,8 +74,8 @@ export default function Home() {
             </div>
 
             <div className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-accent/20 transition-all duration-300">
-              <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
-                <span className="material-symbols-outlined text-blue-600 group-hover:text-white text-4xl transition-colors">translate</span>
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                <span className="material-symbols-outlined text-primary group-hover:text-white text-4xl transition-colors">translate</span>
               </div>
               <h3 className="text-xl font-bold text-primary mb-3">Tests de Langue</h3>
               <p className="text-slate-500 leading-relaxed mb-6">Cours intensifs pour TEF, TCF et IELTS. Maximisez vos points pour le bassin de sélection.</p>

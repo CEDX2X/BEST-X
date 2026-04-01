@@ -12,7 +12,7 @@ export default function ContactSuccess() {
           <h1 className="text-3xl sm:text-4xl font-extrabold text-primary">Merci ! 🎉</h1>
           <p className="mt-4 text-slate-600 text-lg">Votre demande a bien été envoyée. Un conseiller vous contactera très vite.</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/" className="px-8 py-4 bg-primary text-white rounded-xl font-bold shadow-xl hover:bg-blue-700 transition-all">Retour à l’accueil</Link>
+            <Link to="/" className="px-8 py-4 bg-primary text-white rounded-xl font-bold shadow-xl hover:bg-primary/90 transition-all">Retour à l’accueil</Link>
             <Link to="/procedures" className="px-8 py-4 bg-white border border-slate-200 rounded-xl font-bold hover:bg-slate-100 transition-all">Voir les procédures</Link>
           </div>
         </div>

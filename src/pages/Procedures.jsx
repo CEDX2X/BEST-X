@@ -59,7 +59,7 @@ export default function Procedures() {
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <Link className="bg-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition-all" to="/contact">
+            <Link className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition-all" to="/contact">
               Prendre rendez-vous
             </Link>
             <a className="bg-white hover:bg-slate-100 text-slate-900 border border-slate-200 px-8 py-4 rounded-xl font-bold text-lg transition-all" href="tel:+237600000000">

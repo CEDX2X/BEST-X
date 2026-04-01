@@ -10,7 +10,7 @@ module.exports = {
         display: ["ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica", "Arial", "Noto Sans", "Liberation Sans", "sans-serif"],
       },
       colors: {
-        primary: "#0b2e4f",
+        primary: "#2F73D2",
         accent: "#ec1313",
       },
     },
