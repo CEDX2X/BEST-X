@@ -114,9 +114,9 @@ export default function Contact() {
         </p>
       </section>
 
-      <section className="px-6 py-12">
-        <div className="max-w-3xl mx-auto bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-700 transition-colors">
-          <form className="space-y-5" onSubmit={onSubmit}>
+      <section className="px-4 sm:px-6 py-10 sm:py-12">
+        <div className="max-w-3xl mx-auto bg-white dark:bg-slate-800 rounded-2xl md:rounded-3xl p-5 sm:p-8 shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-700 transition-colors">
+          <form className="space-y-4 sm:space-y-6" onSubmit={onSubmit}>
             {status.error && (
               <div className="rounded-xl border border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-900/30 px-4 py-3 text-sm text-red-700 dark:text-red-300 font-semibold">
                 {status.error}
@@ -129,7 +129,7 @@ export default function Contact() {
                 name="fullName"
                 value={form.fullName}
                 onChange={onChange}
-                className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all placeholder:text-slate-400 dark:text-white"
+                className="w-full text-base bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all placeholder:text-slate-400 dark:text-white"
                 placeholder="Ex: Jean Mukoko"
                 type="text"
                 autoComplete="name"
@@ -142,7 +142,7 @@ export default function Contact() {
                 name="email"
                 value={form.email}
                 onChange={onChange}
-                className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all placeholder:text-slate-400 dark:text-white"
+                className="w-full text-base bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all placeholder:text-slate-400 dark:text-white"
                 placeholder="votre@email.com"
                 type="email"
                 autoComplete="email"
@@ -157,7 +157,7 @@ export default function Contact() {
                   name="phone"
                   value={form.phone}
                   onChange={onChange}
-                  className="flex-1 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all placeholder:text-slate-400 dark:text-white"
+                  className="flex-1 text-base bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all placeholder:text-slate-400 dark:text-white"
                   placeholder="6XX XXX XXX"
                   type="tel"
                   autoComplete="tel"
@@ -172,7 +172,7 @@ export default function Contact() {
                   name="service"
                   value={form.service}
                   onChange={onChange}
-                  className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all appearance-none text-slate-700 dark:text-white"
+                  className="w-full text-base bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all appearance-none text-slate-700 dark:text-white"
                 >
                   <optgroup label="Immigration Canada">
                     <option value="permis-etude-canada">Permis d'Étude (Canada)</option>
@@ -200,7 +200,7 @@ export default function Contact() {
                 name="message"
                 value={form.message}
                 onChange={onChange}
-                className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all placeholder:text-slate-400 dark:text-white"
+                className="w-full text-base bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all placeholder:text-slate-400 dark:text-white"
                 placeholder="Comment pouvons-nous vous aider ?"
                 rows={4}
               />
