@@ -36,7 +36,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <span className="material-icons text-accent text-xl">phone</span>
-                <span className="text-sm">+237 6XX XX XX XX</span>
+                <span className="text-sm">+237 600000000</span>
               </li>
               <li className="flex items-center space-x-3">
                 <span className="material-icons text-accent text-xl">email</span>
