@@ -40,7 +40,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <span className="material-icons text-accent text-xl">email</span>
-                <span className="text-sm">contact@canada-express.cm</span>
+                <span className="text-sm">besttravservice@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -63,7 +63,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-200 dark:border-white/5 pt-8 text-center px-6">
-          <p className="text-slate-500 text-xs">© 2024 Cabinet Immigration Express. Tous droits réservés. Bureau de Douala & Yaoundé.</p>
+          <p className="text-slate-500 text-xs">© 2026 <a href="https://kylyo-services.web.app/" target="_blank" rel="noopener noreferrer" className="hover:underline font-medium">Kylyo</a>. Tous droits réservés. Bureau de Douala &amp; Yaoundé.</p>
         </div>
       </footer>
 
