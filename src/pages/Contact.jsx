@@ -158,7 +158,7 @@ export default function Contact() {
                   value={form.phone}
                   onChange={onChange}
                   className="flex-1 text-base bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3.5 px-4 focus:ring-2 focus:ring-accent/20 dark:focus:ring-accent/40 focus:border-accent dark:focus:border-accent outline-none transition-all placeholder:text-slate-400 dark:text-white"
-                  placeholder="6XX XXX XXX"
+                  placeholder="690000000"
                   type="tel"
                   autoComplete="tel"
                 />
@@ -210,8 +210,8 @@ export default function Contact() {
               <button
                 disabled={status.loading}
                 className={`w-full font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-3 ${status.loading
-                    ? 'bg-slate-300 dark:bg-slate-700 text-slate-700 dark:text-slate-300 cursor-not-allowed'
-                    : 'bg-accent hover:bg-red-700 text-white shadow-accent/30 dark:shadow-none active:scale-[0.98]'
+                  ? 'bg-slate-300 dark:bg-slate-700 text-slate-700 dark:text-slate-300 cursor-not-allowed'
+                  : 'bg-accent hover:bg-red-700 text-white shadow-accent/30 dark:shadow-none active:scale-[0.98]'
                   }`}
                 type="submit"
               >

@@ -11,6 +11,11 @@ export default function Header() {
       ? 'text-primary dark:text-white font-semibold hover:text-accent transition-colors'
       : 'text-slate-600 dark:text-slate-300 font-medium hover:text-primary dark:hover:text-white transition-colors'
 
+  const mobileNavClass = ({ isActive }) =>
+    isActive
+      ? 'text-primary dark:text-white font-bold text-lg px-4 py-2 bg-slate-50 dark:bg-slate-800 rounded-lg'
+      : 'text-slate-600 dark:text-slate-300 font-medium text-lg px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg'
+
   const logoUrl =
     'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FLOGO%20BEST%20(2).jpeg?alt=media&token=3a4b7f82-c229-4599-82cf-5b5dd7a6b2e7'
 
@@ -75,18 +80,18 @@ export default function Header() {
         id="mobile-menu"
         className={`${isMobileMenuOpen ? 'flex' : 'hidden'} md:hidden absolute top-16 left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 flex-col p-4 space-y-4 shadow-xl`}
       >
-        <Link className="text-primary dark:text-white font-bold text-lg px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg" to="/" onClick={() => setIsMobileMenuOpen(false)}>
+        <NavLink className={mobileNavClass} to="/" onClick={() => setIsMobileMenuOpen(false)}>
           Accueil
-        </Link>
-        <Link className="text-slate-600 dark:text-slate-300 font-medium text-lg px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg" to="/procedures" onClick={() => setIsMobileMenuOpen(false)}>
+        </NavLink>
+        <NavLink className={mobileNavClass} to="/procedures" onClick={() => setIsMobileMenuOpen(false)}>
           Procédures
-        </Link>
-        <Link className="text-slate-600 dark:text-slate-300 font-medium text-lg px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg" to="/auto-ecole" onClick={() => setIsMobileMenuOpen(false)}>
+        </NavLink>
+        <NavLink className={mobileNavClass} to="/auto-ecole" onClick={() => setIsMobileMenuOpen(false)}>
           Auto-école
-        </Link>
-        <Link className="text-slate-600 dark:text-slate-300 font-medium text-lg px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg" to="/langues" onClick={() => setIsMobileMenuOpen(false)}>
+        </NavLink>
+        <NavLink className={mobileNavClass} to="/langues" onClick={() => setIsMobileMenuOpen(false)}>
           Cours de langue
-        </Link>
+        </NavLink>
         <Link className="bg-accent text-white px-4 py-3 rounded-xl font-bold text-center shadow-lg" to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
           Commencer mon Évaluation
         </Link>
