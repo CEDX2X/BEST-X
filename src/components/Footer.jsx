@@ -68,7 +68,7 @@ export default function Footer() {
       </footer>
 
       <a
-        className="fixed right-6 bottom-20 sm:bottom-24 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50 hover:scale-110 transition-transform"
+        className="fixed right-6 bottom-24 sm:bottom-28 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50 hover:scale-110 transition-transform"
         href="https://wa.me/23768806414"
         target="_blank"
         rel="noopener noreferrer"
