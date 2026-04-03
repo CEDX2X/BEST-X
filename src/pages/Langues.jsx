@@ -29,10 +29,10 @@ export default function Langues() {
             </div>
           </div>
 
-          <div className="rounded-2xl overflow-hidden shadow-2xl dark:shadow-none border border-slate-100 dark:border-slate-700">
+          <div className="rounded-2xl overflow-hidden shadow-2xl dark:shadow-none border border-slate-100 dark:border-slate-700 aspect-square w-full max-w-[1080px] mx-auto">
             <img
               alt="Test de langue"
-              className="w-full h-[360px] object-cover"
+              className="w-full h-full object-cover"
               src="https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FTest%20de%20langue.jpg.jpeg?alt=media&token=c5134c13-ed9b-44f5-b666-f49299191083"
             />
           </div>
