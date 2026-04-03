@@ -1,14 +1,26 @@
 import React from 'react'
+import { useTheme } from '../context/ThemeContext'
 
 export default function Footer() {
+  const { theme } = useTheme()
+  const lightLogoUrl = 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FIMG_5277.PNG?alt=media&token=d79056eb-f47f-4eb9-947b-eb27321b7a29'
+  const darkLogoUrl = 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Flogo%20best%20blanc.png?alt=media&token=934f2a51-11ed-473f-beb4-5a6b03cefe33'
+  
+  const logoUrl = theme === 'dark' ? darkLogoUrl : lightLogoUrl
+
   return (
     <>
       <footer className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white pt-16 pb-8 transition-colors border-t border-slate-100 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="material-symbols-outlined text-white text-2xl">map</span>
+            <div className="flex items-center space-x-3">
+              <div className="h-12 sm:h-14 w-auto flex items-center justify-center">
+                <img
+                  src={logoUrl}
+                  alt="Best Travel"
+                  className="h-full w-auto object-contain"
+                  loading="lazy"
+                />
               </div>
               <span className="font-bold text-xl tracking-tight">Best Travel Service</span>
             </div>
