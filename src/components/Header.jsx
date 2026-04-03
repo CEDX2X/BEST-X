@@ -16,8 +16,10 @@ export default function Header() {
       ? 'text-primary dark:text-white font-bold text-lg px-4 py-2 bg-slate-50 dark:bg-slate-800 rounded-lg'
       : 'text-slate-600 dark:text-slate-300 font-medium text-lg px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg'
 
-  const logoUrl =
-    'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FLOGO%20BEST%20(2).jpeg?alt=media&token=3a4b7f82-c229-4599-82cf-5b5dd7a6b2e7'
+  const lightLogoUrl = 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FIMG_5277.PNG?alt=media&token=d79056eb-f47f-4eb9-947b-eb27321b7a29'
+  const darkLogoUrl = 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Flogo%20best%20blanc.png?alt=media&token=934f2a51-11ed-473f-beb4-5a6b03cefe33'
+  
+  const logoUrl = theme === 'dark' ? darkLogoUrl : lightLogoUrl
 
   return (
     <header className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 sticky top-0 z-50">
@@ -25,11 +27,11 @@ export default function Header() {
         <div className="flex justify-between items-center h-16 sm:h-20">
           <Link to="/" className="flex items-center space-x-3">
             {/* LOGO (agrandi + responsive) */}
-            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl overflow-hidden bg-white border border-slate-100 flex items-center justify-center p-1.5">
+            <div className="h-12 sm:h-14 md:h-16 w-auto flex items-center justify-center">
               <img
                 src={logoUrl}
                 alt="Best Travel"
-                className="w-full h-full object-contain"
+                className="h-full w-auto object-contain"
                 loading="lazy"
               />
             </div>
