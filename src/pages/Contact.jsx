@@ -67,7 +67,7 @@ export default function Contact() {
 *Message :* ${form.message || '(Aucun message)'}`
 
       // Numéro WhatsApp récupéré depuis le Footer
-      const whatsappUrl = `https://wa.me/237688806414?text=${encodeURIComponent(text)}`
+      const whatsappUrl = `https://wa.me/237691001784?text=${encodeURIComponent(text)}`
 
       // 2. Tenter d'envoyer aussi un email si la configuration existe
       const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
