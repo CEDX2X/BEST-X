@@ -1,15 +1,16 @@
 import React, { useMemo, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
 
 export default function Contact() {
   const navigate = useNavigate()
+  const location = useLocation()
 
   const [form, setForm] = useState({
     fullName: '',
     email: '',
     phone: '',
-    service: 'permis-etude-canada',
+    service: location.state?.service || 'permis-etude-canada',
     message: '',
   })
 

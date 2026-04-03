@@ -5,18 +5,21 @@ export default function Procedures() {
   const canadaProcedures = [
     {
       title: "Permis d'Étude",
+      serviceId: "permis-etude-canada",
       desc: "Accompagnement complet : admission, dossier et obtention du visa étudiant.",
       badge: "Populaire",
       image: "https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Fvisa%20%C3%A9tudiant.jpg.jpeg?alt=media&token=af1ad51f-71da-42f5-8211-8730971009eb"
     },
     {
       title: "Preuve de Fonds",
+      serviceId: "autres",
       desc: "Aide à la constitution de votre dossier financier conforme aux exigences d'immigration.",
       badge: "Essentiel",
       image: "https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FPreuve%20de%20fond.jpg.jpeg?alt=media&token=879ea7a3-a7dc-45fb-ac59-f9d944b3ec1b"
     },
     {
       title: "Entrée Express (Famille)",
+      serviceId: "entree-express-famille",
       desc: "Regroupement familial : conjoint, enfants ou parents.",
       badge: "Famille",
       image: "https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FRP%20couple.jpg.jpeg?alt=media&token=c73f0615-ddca-4135-a124-25f3cc70b41f"
@@ -26,18 +29,21 @@ export default function Procedures() {
   const europeProcedures = [
     {
       title: "Visa Visiteur Italie",
+      serviceId: "visa-visiteur-italie",
       desc: "Opportunité saisonnière pour travailler légalement en Italie.",
       badge: "Saisonnier",
       image: "https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Fvisiter%20l'italie.jpg.jpeg?alt=media&token=2831c4b7-9ffd-44b7-9978-372874954f9d"
     },
     {
       title: "Visa Étudiant Europe",
+      serviceId: "visa-etudiant-europe",
       desc: "Inscription universitaire + accompagnement complet du dossier.",
       badge: "Études",
       image: "https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Fvisa%20%C3%A9tudiant.jpg.jpeg?alt=media&token=af1ad51f-71da-42f5-8211-8730971009eb"
     },
     {
       title: "Visa Travail qualifié",
+      serviceId: "visa-travail-autonome",
       desc: "Programme pour travailler légalement en Europe (ex : France).",
       badge: "Travail",
       image: "https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FRP%20couple.jpg.jpeg?alt=media&token=c73f0615-ddca-4135-a124-25f3cc70b41f"
@@ -59,7 +65,7 @@ export default function Procedures() {
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <Link className="bg-primary hover:bg-primary/90 dark:bg-primary-dark dark:hover:bg-primary-dark/90 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition-all" to="/contact">
+            <Link className="bg-primary hover:bg-primary/90 dark:bg-primary-dark dark:hover:bg-primary-dark/90 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition-all" to="/contact" state={{ service: 'permis-etude-canada' }}>
               Prendre rendez-vous
             </Link>
             <a className="bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 px-8 py-4 rounded-xl font-bold text-lg transition-all" href="tel:+237600000000">
@@ -100,7 +106,7 @@ export default function Procedures() {
                     )}
                   </div>
                   <div className="mt-4">
-                    <Link className="text-accent font-bold inline-flex items-center gap-2 hover:gap-3 transition-all" to="/contact">
+                    <Link className="text-accent font-bold inline-flex items-center gap-2 hover:gap-3 transition-all" to="/contact" state={{ service: x.serviceId }}>
                       En savoir plus <span className="material-symbols-outlined text-sm">arrow_forward</span>
                     </Link>
                   </div>
@@ -137,7 +143,7 @@ export default function Procedures() {
                     )}
                   </div>
                   <div className="mt-4">
-                    <Link className="text-primary dark:text-white font-bold inline-flex items-center gap-2 hover:gap-3 transition-all" to="/contact">
+                    <Link className="text-primary dark:text-white font-bold inline-flex items-center gap-2 hover:gap-3 transition-all" to="/contact" state={{ service: x.serviceId }}>
                       En savoir plus <span className="material-symbols-outlined text-sm">arrow_forward</span>
                     </Link>
                   </div>

@@ -20,7 +20,7 @@ export default function Langues() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link to="/contact" className="px-8 py-4 bg-accent text-white rounded-xl font-bold text-lg shadow-xl hover:bg-red-700 transition-all text-center">
+              <Link to="/contact" state={{ service: 'langues' }} className="px-8 py-4 bg-accent text-white rounded-xl font-bold text-lg shadow-xl hover:bg-red-700 transition-all text-center">
                 Demander une évaluation
               </Link>
               <Link to="/procedures" className="px-8 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-lg hover:bg-slate-100 dark:hover:bg-slate-700 dark:text-white transition-all text-center">
@@ -51,7 +51,7 @@ export default function Langues() {
               <h3 className="text-xl font-bold text-primary dark:text-white mb-2">{c.title}</h3>
               <p className="text-slate-600 dark:text-slate-400">{c.desc}</p>
               <div className="mt-5">
-                <Link to="/contact" className="text-accent font-bold inline-flex items-center gap-2 hover:gap-3 transition-all">
+                <Link to="/contact" state={{ service: 'langues' }} className="text-accent font-bold inline-flex items-center gap-2 hover:gap-3 transition-all">
                   S’inscrire <span className="material-symbols-outlined text-sm">arrow_forward</span>
                 </Link>
               </div>

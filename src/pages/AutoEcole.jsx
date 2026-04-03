@@ -17,7 +17,7 @@ export default function AutoEcole() {
               Formation théorique et pratique pour obtenir votre permis rapidement avec des moniteurs certifiés.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link to="/contact" className="px-8 py-4 bg-primary dark:bg-primary-dark text-white rounded-xl font-bold text-lg shadow-xl hover:-translate-y-0.5 transition-all">
+              <Link to="/contact" state={{ service: 'auto-ecole' }} className="px-8 py-4 bg-primary dark:bg-primary-dark text-white rounded-xl font-bold text-lg shadow-xl hover:-translate-y-0.5 transition-all">
                 S’inscrire
               </Link>
               <a href="#tarifs" className="px-8 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-lg hover:bg-slate-50 dark:hover:bg-slate-700 dark:text-white transition-all">
@@ -58,6 +58,7 @@ export default function AutoEcole() {
 
                 <Link
                   to="/contact"
+                  state={{ service: 'auto-ecole' }}
                   className={`w-full py-3 text-center rounded-xl font-bold transition-all ${p.featured ? 'bg-accent text-white hover:bg-red-700' : 'border-2 border-primary dark:border-primary-dark text-primary dark:text-white hover:bg-primary dark:hover:bg-primary-dark hover:text-white'}`}
                 >
                   {p.cta}
