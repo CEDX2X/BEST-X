@@ -5,7 +5,7 @@ export default function Footer() {
   const { theme } = useTheme()
   const lightLogoUrl = 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FIMG_5277.PNG?alt=media&token=d79056eb-f47f-4eb9-947b-eb27321b7a29'
   const darkLogoUrl = 'https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2Flogo%20best%20blanc.png?alt=media&token=934f2a51-11ed-473f-beb4-5a6b03cefe33'
-  
+
   const logoUrl = theme === 'dark' ? darkLogoUrl : lightLogoUrl
 
   return (
@@ -81,7 +81,7 @@ export default function Footer() {
 
       <a
         className="fixed right-6 bottom-24 sm:bottom-28 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50 hover:scale-110 transition-transform"
-        href="https://wa.me/23768806414"
+        href="https://wa.me/237691001784"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp"
