@@ -1,5 +1,5 @@
 {
   "name": "Best Travel",
-  "description": "Agence d'accompagnement en immigration (Canada, Europe), auto-école et cours de langues (TEF, TCF, IELTS) à Douala et Yaoundé.",
-  "requestFramePermissions": []
+  "description": "Accompagnement certifié pour projets d'immigration, études et travail au Canada.",
+  "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

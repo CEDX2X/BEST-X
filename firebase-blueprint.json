@@ -1,0 +1,105 @@
+{
+  "entities": {
+    "consultationRequest": {
+      "title": "Consultation Request",
+      "description": "A client consultation or visa evaluation dossier submitted to Best Travel.",
+      "type": "object",
+      "properties": {
+        "fullName": {
+          "type": "string",
+          "description": "Full name of the applicant",
+          "minLength": 2,
+          "maxLength": 100
+        },
+        "email": {
+          "type": "string",
+          "description": "Contact email address",
+          "maxLength": 100
+        },
+        "phone": {
+          "type": "string",
+          "description": "WhatsApp or mobile phone number",
+          "minLength": 6,
+          "maxLength": 30
+        },
+        "service": {
+          "type": "string",
+          "description": "Requested immigration or training program",
+          "maxLength": 80
+        },
+        "message": {
+          "type": "string",
+          "description": "Applicant message or profile details",
+          "maxLength": 2000
+        },
+        "status": {
+          "type": "string",
+          "description": "Processing status of the inquiry",
+          "enum": ["pending", "in_review", "contacted", "completed"]
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Submission timestamp"
+        }
+      },
+      "required": ["fullName", "email", "phone", "service", "status"]
+    },
+    "siteSettings": {
+      "title": "Site Dynamic Settings & Content",
+      "description": "Live editable texts, service offers, images, and social links.",
+      "type": "object",
+      "properties": {
+        "updatedAt": {
+          "type": "string",
+          "description": "Timestamp of last administrative update"
+        }
+      }
+    },
+    "user": {
+      "title": "User Profile",
+      "description": "Authenticated user profile and role representation.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Unique user ID matching request.auth.uid",
+          "maxLength": 128
+        },
+        "email": {
+          "type": "string",
+          "description": "User email address",
+          "maxLength": 120
+        },
+        "displayName": {
+          "type": "string",
+          "description": "User display name",
+          "maxLength": 100
+        },
+        "role": {
+          "type": "string",
+          "description": "Role of the user",
+          "enum": ["client", "admin"]
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Account registration date"
+        }
+      },
+      "required": ["uid", "email", "role"]
+    }
+  },
+  "firestore": {
+    "/consultationRequests/{requestId}": {
+      "schema": "consultationRequest",
+      "description": "Client intake dossiers and consultation requests."
+    },
+    "/siteSettings/{settingId}": {
+      "schema": "siteSettings",
+      "description": "Dynamic configuration, texts, and active offers."
+    },
+    "/users/{userId}": {
+      "schema": "user",
+      "description": "User accounts and administrative profiles."
+    }
+  }
+}
