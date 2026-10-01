@@ -1,0 +1,14 @@
+# robots.txt for Best Travel
+# https://besttravelservices.site
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin
+
+# Googlebot specific
+User-agent: Googlebot
+Allow: /
+
+# Sitemaps
+Sitemap: https://besttravelservices.site/sitemap.xml

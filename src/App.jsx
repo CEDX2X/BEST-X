@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
+import PageSEO from './components/PageSEO'
 
 import Home from './pages/Home'
 import Procedures from './pages/Procedures'
@@ -11,24 +12,27 @@ import ContactSuccess from './pages/ContactSuccess'
 
 export default function App() {
   return (
-    <Routes>
-      <Route element={<MainLayout />}>
-        <Route path="/" element={<Home />} />
+    <>
+      <PageSEO />
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
 
-        <Route path="/procedures" element={<Procedures />} />
-        <Route path="/auto-ecole" element={<AutoEcole />} />
-        <Route path="/langues" element={<Langues />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/contact/success" element={<ContactSuccess />} />
+          <Route path="/procedures" element={<Procedures />} />
+          <Route path="/auto-ecole" element={<AutoEcole />} />
+          <Route path="/langues" element={<Langues />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact/success" element={<ContactSuccess />} />
 
-        {/* Redirections utiles */}
-        <Route path="/procedure" element={<Navigate to="/procedures" replace />} />
-        <Route path="/autoecole" element={<Navigate to="/auto-ecole" replace />} />
-        <Route path="/language" element={<Navigate to="/langues" replace />} />
+          {/* Redirections utiles */}
+          <Route path="/procedure" element={<Navigate to="/procedures" replace />} />
+          <Route path="/autoecole" element={<Navigate to="/auto-ecole" replace />} />
+          <Route path="/language" element={<Navigate to="/langues" replace />} />
 
-        {/* 404 */}
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Route>
-    </Routes>
+          {/* 404 */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
+      </Routes>
+    </>
   )
 }

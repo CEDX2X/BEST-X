@@ -98,20 +98,20 @@ export default function Home() {
               </div>
 
               {/* Display Headline with strict typographic hierarchy */}
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08] text-slate-900 dark:text-white text-balance">
+              <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] sm:leading-[1.08] text-slate-900 dark:text-white text-balance">
                 {homeTexts.heroTitle || "L'immigration canadienne structurée avec rigueur depuis le Cameroun."}
               </h1>
 
               {/* Concise, concrete value proposition */}
-              <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl font-normal">
+              <p className="text-base sm:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl font-normal">
                 {homeTexts.heroSubtitle || "Cabinet conseil basé à Douala. Nous instruisons vos dossiers de permis d'études, d'Entrée Express, de permis de travail et de formation préparatoire avec transparence juridique et accompagnement de proximité."}
               </p>
 
               {/* Action Buttons */}
-              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-accent hover:bg-accent-hover text-white rounded-xl font-semibold text-base shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 text-center"
+                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 bg-accent hover:bg-accent-hover text-white rounded-xl font-semibold text-sm sm:text-base shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 text-center"
                 >
                   <span>Démarrer mon évaluation d'admissibilité</span>
                   <ArrowRight className="size-4" />
@@ -119,37 +119,37 @@ export default function Home() {
 
                 <a
                   href="#pathway-explorer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-800 dark:text-slate-200 rounded-xl font-medium text-base transition-colors text-center"
+                  className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-slate-800 dark:text-slate-200 rounded-xl font-medium text-sm sm:text-base transition-colors text-center"
                 >
                   <span>Explorer les filières</span>
                 </a>
               </div>
 
               {/* Direct Proof Line (Quantitative rigor, no fake scorecards) */}
-              <div className="pt-6 border-t border-slate-200/80 dark:border-white/10 grid grid-cols-3 gap-6 text-left">
+              <div className="pt-6 border-t border-slate-200/80 dark:border-white/10 grid grid-cols-3 gap-2 sm:gap-6 text-left">
                 <div>
-                  <div className="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tabular-nums">
+                  <div className="font-display text-xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tabular-nums">
                     +2 500
                   </div>
-                  <div className="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">
+                  <div className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">
                     Dossiers et visas instruits
                   </div>
                 </div>
 
                 <div>
-                  <div className="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tabular-nums">
+                  <div className="font-display text-xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tabular-nums">
                     10+ ans
                   </div>
-                  <div className="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">
-                    Expérience cumulée au Cameroun
+                  <div className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">
+                    Expérience au Cameroun
                   </div>
                 </div>
 
                 <div>
-                  <div className="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tabular-nums">
+                  <div className="font-display text-xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tabular-nums">
                     100%
                   </div>
-                  <div className="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">
+                  <div className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">
                     Conformité légale IRCC
                   </div>
                 </div>
@@ -162,7 +162,7 @@ export default function Home() {
                 <img
                   src="https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FPage%20d'accueil_Plan%20de%20travail%201.jpg.jpeg?alt=media&token=6488aeee-b014-4164-8a0d-ff857b1dc5fc"
                   alt="Best Travel - Cabinet d'immigration et mobilité Canada au Cameroun"
-                  className="w-full h-[420px] sm:h-[480px] object-cover object-center"
+                  className="w-full h-[320px] sm:h-[440px] lg:h-[480px] object-cover object-center"
                   loading="eager"
                   referrerPolicy="no-referrer"
                 />
@@ -204,12 +204,12 @@ export default function Home() {
           </div>
 
           {/* Interactive Segmented Selector (Functional buttons with state) */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 p-1.5 bg-slate-200/70 dark:bg-slate-800/80 rounded-2xl mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5 sm:gap-2 p-1.5 bg-slate-200/70 dark:bg-slate-800/80 rounded-2xl mb-8">
             <button
               onClick={() => setActivePathway('etudes')}
-              className={`flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all ${
+              className={`flex items-center justify-center gap-1.5 sm:gap-2 py-2.5 sm:py-3 px-2 sm:px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                 activePathway === 'etudes'
-                  ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm'
+                  ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm font-bold'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
@@ -219,9 +219,9 @@ export default function Home() {
 
             <button
               onClick={() => setActivePathway('entreeExpress')}
-              className={`flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all ${
+              className={`flex items-center justify-center gap-1.5 sm:gap-2 py-2.5 sm:py-3 px-2 sm:px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                 activePathway === 'entreeExpress'
-                  ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm'
+                  ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm font-bold'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
@@ -231,9 +231,9 @@ export default function Home() {
 
             <button
               onClick={() => setActivePathway('autoEcole')}
-              className={`flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all ${
+              className={`flex items-center justify-center gap-1.5 sm:gap-2 py-2.5 sm:py-3 px-2 sm:px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                 activePathway === 'autoEcole'
-                  ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm'
+                  ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm font-bold'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
@@ -243,9 +243,9 @@ export default function Home() {
 
             <button
               onClick={() => setActivePathway('langues')}
-              className={`flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold transition-all ${
+              className={`flex items-center justify-center gap-1.5 sm:gap-2 py-2.5 sm:py-3 px-2 sm:px-4 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                 activePathway === 'langues'
-                  ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm'
+                  ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm font-bold'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >

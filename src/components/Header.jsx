@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { useTheme } from '../context/ThemeContext'
 import { useSiteContent } from '../context/SiteContentContext'
-import { Sun, Moon, Menu, X, ArrowRight } from 'lucide-react'
+import { Sun, Moon, Menu, X, ArrowRight, Phone, MessageSquare } from 'lucide-react'
 import AdminLoginModal from './admin/AdminLoginModal'
 import AdminDashboard from './admin/AdminDashboard'
 
@@ -25,6 +25,10 @@ export default function Header() {
   const logoUrl = theme === 'dark' ? darkLogoUrl : lightLogoUrl
   const logoHeight = Number(content.images?.logoHeight) || 50
   const logoHeightMobile = Number(content.images?.logoHeightMobile) || Math.max(28, Math.round(logoHeight * 0.78))
+
+  const agencyPhone = content.general?.phone || '+237 691 00 17 84'
+  const rawPhone = agencyPhone.replace(/[^0-9+]/g, '')
+  const whatsappUrl = content.socialLinks?.whatsapp || `https://wa.me/${rawPhone.replace('+', '')}`
 
   // Hidden admin trigger on double-click / double-tap
   const triggerAdminCheck = (e) => {
@@ -52,6 +56,13 @@ export default function Header() {
         : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
     }`
 
+  const mobileNavClass = ({ isActive }) =>
+    `flex items-center justify-between px-3.5 py-3 text-base font-medium rounded-xl transition-colors ${
+      isActive
+        ? 'bg-accent/10 text-accent font-semibold dark:bg-accent/20 dark:text-white'
+        : 'text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5'
+    }`
+
   return (
     <>
       {/* Hidden Admin Login Prompt */}
@@ -75,9 +86,10 @@ export default function Header() {
         }}
       />
 
-      <header className="bg-white/90 dark:bg-slate-925/90 backdrop-blur-md border-b border-slate-200/80 dark:border-white/10 sticky top-0 z-50 transition-colors">
+      <header className="bg-white/95 dark:bg-slate-925/95 backdrop-blur-md border-b border-slate-200/80 dark:border-white/10 sticky top-0 z-50 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center min-h-[4.5rem] py-2">
+          <div className="flex justify-between items-center min-h-[4.25rem] sm:min-h-[4.75rem] py-2">
+            
             {/* Zone 1: Brand Logo with Double Click Admin Trigger */}
             <Link
               to="/"
@@ -87,10 +99,11 @@ export default function Header() {
               aria-label="Best Travel Accueil (double-cliquer pour console d'administration)"
               title="Best Travel"
             >
+              {/* Responsive container adapting smoothly between mobile & desktop */}
               <div
                 className="w-auto flex items-center justify-center transition-all duration-150"
                 style={{
-                  height: `${logoHeight}px`,
+                  height: `${logoHeightMobile}px`,
                   maxHeight: '90px',
                 }}
               >
@@ -98,16 +111,26 @@ export default function Header() {
                   src={logoUrl}
                   alt={content.general?.brandName || 'Best Travel'}
                   style={{
+                    height: `${logoHeightMobile}px`,
+                    maxHeight: '90px',
+                  }}
+                  className="sm:hidden w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                  loading="eager"
+                />
+                <img
+                  src={logoUrl}
+                  alt={content.general?.brandName || 'Best Travel'}
+                  style={{
                     height: `${logoHeight}px`,
                     maxHeight: '90px',
                   }}
-                  className="w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+                  className="hidden sm:block w-auto object-contain transition-transform duration-200 group-hover:scale-105"
                   loading="eager"
                 />
               </div>
             </Link>
 
-            {/* Zone 2: Clean Text Nav Links */}
+            {/* Zone 2: Clean Text Nav Links (Desktop) */}
             <nav className="hidden md:flex items-center gap-8">
               <NavLink className={navClass} to="/">
                 Accueil
@@ -126,7 +149,7 @@ export default function Header() {
               </NavLink>
             </nav>
 
-            {/* Zone 3: Primary Actions */}
+            {/* Zone 3: Primary Actions (Desktop) */}
             <div className="hidden md:flex items-center gap-4">
               <button
                 onClick={toggleTheme}
@@ -147,21 +170,22 @@ export default function Header() {
             </div>
 
             {/* Mobile Actions & Hamburger */}
-            <div className="md:hidden flex items-center gap-2">
+            <div className="md:hidden flex items-center gap-1 sm:gap-2">
               <button
                 onClick={toggleTheme}
-                className="p-2 text-slate-600 dark:text-slate-300"
+                className="p-2 text-slate-600 dark:text-slate-300 rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
                 aria-label="Basculer le thème"
               >
                 {theme === 'dark' ? <Sun className="size-5" /> : <Moon className="size-5" />}
               </button>
+
               <button
-                className="p-2 text-slate-800 dark:text-white focus:outline-none"
+                className="p-2.5 text-slate-800 dark:text-white focus:outline-none rounded-lg hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
                 onClick={() => setIsMobileMenuOpen((v) => !v)}
                 aria-expanded={isMobileMenuOpen}
                 aria-label="Ouvrir le menu de navigation"
               >
-                {isMobileMenuOpen ? <X className="size-6" /> : <Menu className="size-6" />}
+                {isMobileMenuOpen ? <X className="size-6 text-accent" /> : <Menu className="size-6" />}
               </button>
             </div>
           </div>
@@ -169,49 +193,78 @@ export default function Header() {
 
         {/* Mobile Drawer Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-white/10 px-4 pt-3 pb-6 space-y-3">
-            <Link
-              to="/"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-3 py-2 text-base font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg"
-            >
-              Accueil
-            </Link>
-            <Link
-              to="/procedures"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-3 py-2 text-base font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg"
-            >
-              Procédures Canada
-            </Link>
-            <Link
-              to="/auto-ecole"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-3 py-2 text-base font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg"
-            >
-              Auto-école
-            </Link>
-            <Link
-              to="/langues"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-3 py-2 text-base font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg"
-            >
-              Cours de langue
-            </Link>
-            <Link
-              to="/contact"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-3 py-2 text-base font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg"
-            >
-              Contact
-            </Link>
-            <div className="pt-2">
+          <div className="md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-white/10 px-4 pt-3 pb-6 space-y-3 animate-in slide-in-from-top-2 duration-200">
+            <div className="space-y-1">
+              <NavLink
+                to="/"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={mobileNavClass}
+              >
+                <span>Accueil</span>
+                <ArrowRight className="size-4 opacity-40" />
+              </NavLink>
+              <NavLink
+                to="/procedures"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={mobileNavClass}
+              >
+                <span>Procédures Canada</span>
+                <ArrowRight className="size-4 opacity-40" />
+              </NavLink>
+              <NavLink
+                to="/auto-ecole"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={mobileNavClass}
+              >
+                <span>Auto-école</span>
+                <ArrowRight className="size-4 opacity-40" />
+              </NavLink>
+              <NavLink
+                to="/langues"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={mobileNavClass}
+              >
+                <span>Cours de langue</span>
+                <ArrowRight className="size-4 opacity-40" />
+              </NavLink>
+              <NavLink
+                to="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={mobileNavClass}
+              >
+                <span>Contact & Agence</span>
+                <ArrowRight className="size-4 opacity-40" />
+              </NavLink>
+            </div>
+
+            {/* Quick Contact & Action Buttons for Mobile */}
+            <div className="pt-3 border-t border-slate-200 dark:border-white/10 space-y-2">
+              <div className="grid grid-cols-2 gap-2">
+                <a
+                  href={`tel:${rawPhone}`}
+                  className="flex items-center justify-center gap-2 py-2.5 px-3 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-xl text-xs font-semibold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                >
+                  <Phone className="size-3.5 text-accent" />
+                  <span>Appeler</span>
+                </a>
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 py-2.5 px-3 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 rounded-xl text-xs font-semibold hover:bg-emerald-500/20 transition-colors"
+                >
+                  <MessageSquare className="size-3.5" />
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+
               <Link
                 to="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full py-3 text-center text-sm font-semibold text-white bg-accent rounded-xl shadow-md"
+                className="flex items-center justify-center gap-2 w-full py-3.5 text-center text-sm font-semibold text-white bg-accent hover:bg-accent-hover rounded-xl shadow-md transition-all active:scale-[0.98]"
               >
-                Évaluation gratuite
+                <span>Évaluation d'admissibilité gratuite</span>
+                <ArrowRight className="size-4" />
               </Link>
             </div>
           </div>

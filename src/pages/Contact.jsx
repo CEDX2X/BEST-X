@@ -236,7 +236,7 @@ export default function Contact() {
                       value={form.fullName}
                       onChange={onChange}
                       placeholder="Ex: Paul Atangana"
-                      className="w-full text-sm bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-slate-400 dark:text-white"
+                      className="w-full text-base sm:text-sm bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-slate-400 dark:text-white"
                     />
                   </div>
 
@@ -251,7 +251,7 @@ export default function Contact() {
                         value={form.email}
                         onChange={onChange}
                         placeholder="votre.email@exemple.com"
-                        className="w-full text-sm bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-slate-400 dark:text-white"
+                        className="w-full text-base sm:text-sm bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-slate-400 dark:text-white"
                       />
                     </div>
 
@@ -265,7 +265,7 @@ export default function Contact() {
                         value={form.phone}
                         onChange={onChange}
                         placeholder="+237 6XX XX XX XX"
-                        className="w-full text-sm bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-slate-400 dark:text-white"
+                        className="w-full text-base sm:text-sm bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all placeholder:text-slate-400 dark:text-white"
                       />
                     </div>
                   </div>
@@ -278,7 +278,7 @@ export default function Contact() {
                       name="service"
                       value={form.service}
                       onChange={onChange}
-                      className="w-full text-sm bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-slate-900 dark:text-white"
+                      className="w-full text-base sm:text-sm bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-slate-900 dark:text-white"
                     >
                       <optgroup label="Immigration & Visas Canada">
                         <option value="permis-etude-canada">Permis d'Études (Canada)</option>

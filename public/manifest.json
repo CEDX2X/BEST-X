@@ -1,0 +1,21 @@
+{
+  "name": "Best Travel - Cabinet Immigration Canada & Services",
+  "short_name": "Best Travel",
+  "description": "Cabinet conseil certifié pour l'immigration Canada, permis d'études, auto-école et cours de langues à Douala.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B132B",
+  "theme_color": "#0B132B",
+  "icons": [
+    {
+      "src": "https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FIMG_5277.PNG?alt=media&token=d79056eb-f47f-4eb9-947b-eb27321b7a29",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://firebasestorage.googleapis.com/v0/b/kylyoapp-8ec0b.firebasestorage.app/o/Ced%2FIMG_5277.PNG?alt=media&token=d79056eb-f47f-4eb9-947b-eb27321b7a29",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
